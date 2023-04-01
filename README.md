@@ -2,31 +2,32 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [� Table of Contents](#-table-of-contents)
+- [📖 \[Book Store\] ](#-book-store-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [webpack-demo] <a name="about-project"></a>
+# 📖 [Book Store] <a name="about-project"></a>
 
-**[webpack-demo]** This is a project to practice web-pack use and implementations.
+**[bookstore]** This is a project that allow users to add a book which includes book title and author.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,21 +38,10 @@ For this project, HTML, CSS and JavaScript has been used
 <details>
   <summary>Client</summary>
   <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
     <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -59,8 +49,8 @@ For this project, HTML, CSS and JavaScript has been used
 
 ### Key Features <a name="key-features"></a>
 
-- **[Using webpack for effective managment]**
-- **[Using different dipendencies and modules]**
+- **[Add new books]**
+- **[Show added books]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,7 +58,7 @@ For this project, HTML, CSS and JavaScript has been used
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- There is no live demo for now
+- Coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,9 +78,9 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/getssh/webpack-demo
+git clone https://github.com/getssh/bookstore
 
-cd webpack-demo
+cd bookstore
 
 ### Install
 
@@ -150,7 +140,7 @@ use github pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/getssh/webpack-demo/issues).
+Feel free to check the [issues page](https://github.com/getssh/bookstore/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
