@@ -1,18 +1,39 @@
 import './BookInfo.css';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const BookInfo = ({ catagory, title, author }) => (
-  <div>
-    <p>{catagory}</p>
-    <h3>{title}</h3>
-    <p>{author}</p>
-  </div>
-);
+function BookInfo({ onSubmit }) {
+  const [bookName, setBookName] = useState('');
+  const [authorName, setAuthorName] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSubmit({ bookName, authorName });
+    setBookName('');
+    setAuthorName('');
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={bookName}
+        onChange={(event) => setBookName(event.target.value)}
+        placeholder="Title"
+      />
+      <input
+        type="text"
+        value={authorName}
+        onChange={(event) => setAuthorName(event.target.value)}
+        placeholder="Author"
+      />
+      <button type="submit">Add Book</button>
+    </form>
+  );
+}
 
 BookInfo.propTypes = {
-  catagory: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default BookInfo;

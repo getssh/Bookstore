@@ -1,53 +1,30 @@
 import './Book.css';
+import { useState } from 'react';
 import BookInfo from './bookInfo/BookInfo';
-import BookStatus from './bookStatus/BookStatus';
-import BookChapter from './bookChapter/BookChapter';
 
-const bookData = [
-  {
-    catagory: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    completed: 'Completed',
-    percent: '64%',
-    chapter: 'Chapter 17',
-  },
-  {
-    catagory: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    completed: 'Completed',
-    percent: '8%',
-    chapter: "Chapter 3: 'A Lesson Learned'",
-  },
-  {
-    catagory: 'Economy',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    completed: 'Completed',
-    percent: '0%',
-    chapter: 'Introduction',
-  },
-];
+const Book = () => {
+  const [bookData, setBookData] = useState([]);
 
-const books = bookData.map((book) => (
-  <>
-    <BookInfo
-      catagory={book.catagory}
-      title={book.title}
-      author={book.author}
-    />
-    <BookStatus
-      completed={book.completed}
-      percent={book.percent}
-    />
-    <BookChapter chapter={book.chapter} />
-  </>
-));
-const Book = () => (
-  <div className="book">
-    {books}
-  </div>
-);
+  const handleAddBook = (book) => {
+    setBookData([...bookData, book]);
+  };
+  return (
+    <div>
+      <h2>Book Store</h2>
+      <ul>
+        {bookData.map((book) => (
+          <li key={bookData.length}>
+            {book.bookName}
+            {' '}
+            by
+            {' '}
+            {book.authorName}
+          </li>
+        ))}
+      </ul>
+      <BookInfo onSubmit={handleAddBook} />
+    </div>
+  );
+};
 
 export default Book;
