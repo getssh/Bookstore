@@ -1,5 +1,6 @@
 import './SingleBook.css';
 import PropTypes from 'prop-types';
+import Buttons from '../Buttons/Buttons';
 
 const SingleBook = ({ bookName, authorName }) => (
   <li>
@@ -9,7 +10,7 @@ const SingleBook = ({ bookName, authorName }) => (
     {' '}
     {authorName}
     {' '}
-    <button type="button">Remove</button>
+    <Buttons btnText="Remove" />
   </li>
 );
 
