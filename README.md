@@ -26,7 +26,7 @@
 
 # 📖 [Book Store] <a name="about-project"></a>
 
-**[bookstore]** This is a project that allow users to add a book which includes book title and author.
+**[bookstore]** This project is a simple React application that allows users to add new books and authors using a form. The app consists of many components. Home page displays the form and a list of added books, and components like Book handles the form inputs and submission. When the user submits the form, a new book object is created and added to the list of books. More over this application can be used to remove and edit books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
