@@ -7,7 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [� Getting Started ](#-getting-started-)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -59,7 +59,7 @@ For this project, HTML, CSS and JavaScript has been used
 
 - Coming soon -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 
@@ -89,24 +89,15 @@ npm install
 
 ### Usage
 
-To run the project, execute the following command:
-
-Use a liveserver of Run it on a web browser
+npm start
 
 ### Run tests
 
-To run tests, run the following command:
-
-npx hint .
-npx stylelint "**/*.{css,scss}"
-npx eslint .
+npm test
 
 ### Deployment
 
-You can deploy this project using:
-
-Set up a deployment in package.json and run deploy or
-use github pages
+npm run build
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
