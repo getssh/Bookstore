@@ -2,7 +2,7 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📖 \[Book Store\] ](#-book-store-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
