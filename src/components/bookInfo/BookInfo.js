@@ -8,9 +8,11 @@ function BookInfo({ onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit({ bookName, authorName });
-    setBookName('');
-    setAuthorName('');
+    if (bookName.trim() && authorName.trim()) {
+      onSubmit({ bookName, authorName });
+      setBookName('');
+      setAuthorName('');
+    }
   };
 
   return (
