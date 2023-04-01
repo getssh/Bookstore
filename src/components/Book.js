@@ -1,6 +1,7 @@
 import './Book.css';
 import { useState } from 'react';
 import BookInfo from './bookInfo/BookInfo';
+import SingleBook from './SingleBook/SingleBook';
 
 const Book = () => {
   const [bookData, setBookData] = useState([]);
@@ -13,13 +14,11 @@ const Book = () => {
       <h2>Book Store</h2>
       <ul>
         {bookData.map((book) => (
-          <li key={bookData.length}>
-            {book.bookName}
-            {' '}
-            by
-            {' '}
-            {book.authorName}
-          </li>
+          <SingleBook
+            key={bookData.length}
+            bookName={book.bookName}
+            authorName={book.authorName}
+          />
         ))}
       </ul>
       <BookInfo onSubmit={handleAddBook} />
