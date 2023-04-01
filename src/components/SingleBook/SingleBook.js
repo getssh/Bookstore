@@ -8,6 +8,8 @@ const SingleBook = ({ bookName, authorName }) => (
     by
     {' '}
     {authorName}
+    {' '}
+    <button type="button">Remove</button>
   </li>
 );
 
