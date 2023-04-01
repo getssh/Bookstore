@@ -2,31 +2,31 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Book Store\] ](#-book-store-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [webpack-demo] <a name="about-project"></a>
+# 📖 [Book Store] <a name="about-project"></a>
 
-**[webpack-demo]** This is a project to practice web-pack use and implementations.
+**[bookstore]** This project is a simple React application that allows users to add new books and authors using a form. The app consists of many components. Home page displays the form and a list of added books, and components like Book handles the form inputs and submission. When the user submits the form, a new book object is created and added to the list of books. More over this application can be used to remove and edit books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,21 +37,10 @@ For this project, HTML, CSS and JavaScript has been used
 <details>
   <summary>Client</summary>
   <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
     <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -59,18 +48,18 @@ For this project, HTML, CSS and JavaScript has been used
 
 ### Key Features <a name="key-features"></a>
 
-- **[Using webpack for effective managment]**
-- **[Using different dipendencies and modules]**
+- **[Add new books]**
+- **[Show added books]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-- There is no live demo for now
+- Coming soon -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 
@@ -88,9 +77,9 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/getssh/webpack-demo
+git clone https://github.com/getssh/bookstore
 
-cd webpack-demo
+cd bookstore
 
 ### Install
 
@@ -100,24 +89,15 @@ npm install
 
 ### Usage
 
-To run the project, execute the following command:
-
-Use a liveserver of Run it on a web browser
+npm start
 
 ### Run tests
 
-To run tests, run the following command:
-
-npx hint .
-npx stylelint "**/*.{css,scss}"
-npx eslint .
+npm test
 
 ### Deployment
 
-You can deploy this project using:
-
-Set up a deployment in package.json and run deploy or
-use github pages
+npm run build
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +130,7 @@ use github pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/getssh/webpack-demo/issues).
+Feel free to check the [issues page](https://github.com/getssh/bookstore/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
