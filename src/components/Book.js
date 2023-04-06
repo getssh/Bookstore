@@ -1,9 +1,12 @@
 import './Book.css';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import BookInfo from './bookInfo/BookInfo';
 import SingleBook from './SingleBook/SingleBook';
 
 const Book = () => {
+  const books = useSelector((state) => state.books.books);
+  console.log(Array.isArray(books));
   const [bookData, setBookData] = useState([]);
 
   const handleAddBook = (book) => {
@@ -13,11 +16,11 @@ const Book = () => {
     <div>
       <h2>Book Store</h2>
       <ul>
-        {bookData.map((book) => (
+        {books.map((book) => (
           <SingleBook
-            key={bookData.length}
-            bookName={book.bookName}
-            authorName={book.authorName}
+            key={book.item_id}
+            bookName={book.title}
+            authorName={book.author}
           />
         ))}
       </ul>
