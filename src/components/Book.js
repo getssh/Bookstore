@@ -17,11 +17,13 @@ const Book = () => {
       <h2>Book Store</h2>
       <ul>
         {books.map((book) => (
-          <SingleBook
-            key={book.item_id}
-            bookName={book.title}
-            authorName={book.author}
-          />
+          <div key={book.item_id}>
+            <SingleBook
+              bookName={book.title}
+              authorName={book.author}
+              id={book.item_id}
+            />
+          </div>
         ))}
       </ul>
       <BookInfo onSubmit={handleAddBook} />
