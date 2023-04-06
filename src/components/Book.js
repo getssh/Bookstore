@@ -1,27 +1,26 @@
 import './Book.css';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import BookInfo from './bookInfo/BookInfo';
 import SingleBook from './SingleBook/SingleBook';
 
 const Book = () => {
-  const [bookData, setBookData] = useState([]);
+  const books = useSelector((state) => state.books.books);
 
-  const handleAddBook = (book) => {
-    setBookData([...bookData, book]);
-  };
   return (
     <div>
       <h2>Book Store</h2>
       <ul>
-        {bookData.map((book) => (
-          <SingleBook
-            key={bookData.length}
-            bookName={book.bookName}
-            authorName={book.authorName}
-          />
+        {books.map((book) => (
+          <div key={book.item_id}>
+            <SingleBook
+              bookName={book.title}
+              authorName={book.author}
+              id={book.item_id}
+            />
+          </div>
         ))}
       </ul>
-      <BookInfo onSubmit={handleAddBook} />
+      <BookInfo />
     </div>
   );
 };

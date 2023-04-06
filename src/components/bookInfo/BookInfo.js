@@ -1,15 +1,19 @@
 import './BookInfo.css';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
+import { addBook } from '../../redux/books/booksSlice';
+import Button from '../Button/Button';
 
-function BookInfo({ onSubmit }) {
+function BookInfo() {
+  const dispatch = useDispatch();
   const [bookName, setBookName] = useState('');
   const [authorName, setAuthorName] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (bookName.trim() && authorName.trim()) {
-      onSubmit({ bookName, authorName });
+      dispatch(addBook({ item_id: uuid(), title: bookName, author: authorName }));
       setBookName('');
       setAuthorName('');
     }
@@ -29,13 +33,10 @@ function BookInfo({ onSubmit }) {
         onChange={(event) => setAuthorName(event.target.value)}
         placeholder="Author"
       />
-      <button type="submit">Add Book</button>
+      <Button btnText="Add Book" btnAction={handleSubmit} btnType="submit" />
+
     </form>
   );
 }
-
-BookInfo.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default BookInfo;
