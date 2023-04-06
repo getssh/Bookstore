@@ -1,7 +1,7 @@
 import './SingleBook.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import Buttons from '../Buttons/Buttons';
+import Button from '../Button/Button';
 import { removeBook } from '../../redux/books/booksSlice';
 
 const SingleBook = ({ bookName, authorName, id }) => {
@@ -14,9 +14,10 @@ const SingleBook = ({ bookName, authorName, id }) => {
       {' '}
       {authorName}
       {' '}
-      <Buttons
+      <Button
         btnText="Remove"
-        removeBook={() => dispatch(removeBook(id))}
+        btnAction={() => dispatch(removeBook(id))}
+        btnType="button"
       />
     </li>
   );

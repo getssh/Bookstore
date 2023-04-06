@@ -1,8 +1,8 @@
 import './BookCatagory.css';
-import Buttons from '../Buttons/Buttons';
+import Button from '../Button/Button';
 
 const BookCatagory = () => (
-  <Buttons btnText="Check Status" />
+  <Button btnText="Check Status" btnType="button" />
 );
 
 export default BookCatagory;

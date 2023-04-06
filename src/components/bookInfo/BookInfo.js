@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
 import { addBook } from '../../redux/books/booksSlice';
+import Button from '../Button/Button';
 
 function BookInfo() {
   const dispatch = useDispatch();
@@ -32,7 +33,8 @@ function BookInfo() {
         onChange={(event) => setAuthorName(event.target.value)}
         placeholder="Author"
       />
-      <button type="submit">Add Book</button>
+      <Button btnText="Add Book" btnAction={handleSubmit} btnType="submit" />
+
     </form>
   );
 }
