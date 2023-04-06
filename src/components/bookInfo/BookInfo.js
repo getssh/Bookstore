@@ -1,15 +1,18 @@
 import './BookInfo.css';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
+import { addBook } from '../../redux/books/booksSlice';
 
-function BookInfo({ onSubmit }) {
+function BookInfo() {
+  const dispatch = useDispatch();
   const [bookName, setBookName] = useState('');
   const [authorName, setAuthorName] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (bookName.trim() && authorName.trim()) {
-      onSubmit({ bookName, authorName });
+      dispatch(addBook({ item_id: uuid(), title: bookName, author: authorName }));
       setBookName('');
       setAuthorName('');
     }
@@ -33,9 +36,5 @@ function BookInfo({ onSubmit }) {
     </form>
   );
 }
-
-BookInfo.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default BookInfo;
