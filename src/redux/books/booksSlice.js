@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getBook } from '../../api';
 // id u4wOJkEcCFB44WNH7OIZ
 const initialState = {
   books: [],
