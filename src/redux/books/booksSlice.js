@@ -1,8 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import getBook from '../../api';
+import { getBook, createBook } from '../../api';
 // id u4wOJkEcCFB44WNH7OIZ
 
-export const getBooks = createAsyncThunk('books/getBooks', getBook);
+export const getBooks = createAsyncThunk('books/getBook', getBook);
+export const addBook = createAsyncThunk('books/craeteBook',
+  async (bookData) => {
+    const response = await createBook(bookData);
+    return response;
+  });
 
 const initialState = {
   books: [],
@@ -14,18 +19,18 @@ const bookSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, action) => ({
-      ...state,
-      books: [
-        ...state.books,
-        {
-          item_id: action.payload.item_id,
-          title: action.payload.title,
-          author: action.payload.author,
-          category: '',
-        },
-      ],
-    }),
+    // addBook: (state, action) => ({
+    //   ...state,
+    //   books: [
+    //     ...state.books,
+    //     {
+    //       item_id: action.payload.item_id,
+    //       title: action.payload.title,
+    //       author: action.payload.author,
+    //       category: '',
+    //     },
+    //   ],
+    // }),
     removeBook: (state, action) => ({
       ...state,
       books: state.books.filter((book) => book.item_id !== action.payload),
@@ -50,5 +55,5 @@ const bookSlice = createSlice({
   },
 });
 
-export const { addBook, removeBook } = bookSlice.actions;
+export const { removeBook } = bookSlice.actions;
 export default bookSlice.reducer;

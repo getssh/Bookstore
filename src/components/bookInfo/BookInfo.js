@@ -13,7 +13,12 @@ function BookInfo() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (bookName.trim() && authorName.trim()) {
-      dispatch(addBook({ item_id: uuid(), title: bookName, author: authorName }));
+      dispatch(addBook({
+        item_id: uuid(),
+        title: bookName,
+        author: authorName,
+        category: '',
+      }));
       setBookName('');
       setAuthorName('');
     }

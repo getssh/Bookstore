@@ -9,7 +9,7 @@ const Book = () => {
   const { books, isLoading, error } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getBooks);
+    dispatch(getBooks());
   }, [dispatch]);
 
   return (
@@ -33,12 +33,12 @@ const Book = () => {
       }
       <div>
         <ul>
-          {books.map((book) => (
-            <div key={book.item_id}>
+          {Object.keys(books).map((book) => (
+            <div key={book}>
               <SingleBook
-                bookName={book.title}
-                authorName={book.author}
-                id={book.item_id}
+                bookName={books[book][0].title}
+                authorName={books[book][0].author}
+                id={book}
               />
             </div>
           ))}
