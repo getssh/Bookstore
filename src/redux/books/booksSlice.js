@@ -1,6 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getBook } from '../../api';
+import getBook from '../../api';
 // id u4wOJkEcCFB44WNH7OIZ
+
+export const getBooks = createAsyncThunk('books/getBooks', getBook);
+
 const initialState = {
   books: [],
   isLoading: false,
@@ -27,6 +30,23 @@ const bookSlice = createSlice({
       ...state,
       books: state.books.filter((book) => book.item_id !== action.payload),
     }),
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getBooks.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(getBooks.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        books: action.payload,
+      }))
+      .addCase(getBooks.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.error,
+      }));
   },
 });
 
