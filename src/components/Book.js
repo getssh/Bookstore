@@ -6,11 +6,13 @@ import SingleBook from './SingleBook/SingleBook';
 import { getBooks } from '../redux/books/booksSlice';
 
 const Book = () => {
-  const { books, isLoading, error } = useSelector((state) => state.books);
+  const {
+    books, isLoading, error, done,
+  } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch, done]);
 
   return (
     <div>

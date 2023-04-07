@@ -9,6 +9,7 @@ function BookInfo() {
   const dispatch = useDispatch();
   const [bookName, setBookName] = useState('');
   const [authorName, setAuthorName] = useState('');
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (bookName.trim() && authorName.trim()) {

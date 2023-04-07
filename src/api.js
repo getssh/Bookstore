@@ -14,5 +14,5 @@ export const createBook = async (book) => {
 
 export const deleteBook = async (id) => {
   const response = await axios.delete(`${url}${id}`, id);
-  return response.data;
+  return response.id;
 };

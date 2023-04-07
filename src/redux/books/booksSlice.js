@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getBook, createBook, deleteBook } from '../../api';
-// id u4wOJkEcCFB44WNH7OIZ
 
 export const getBooks = createAsyncThunk('books/getBooks', getBook);
 export const addBook = createAsyncThunk('books/addBook',
@@ -15,9 +14,10 @@ export const removeBook = createAsyncThunk('books/removeBook',
   });
 
 const initialState = {
-  books: [],
+  books: {},
   isLoading: false,
   error: null,
+  done: false,
 };
 
 const bookSlice = createSlice({
@@ -39,6 +39,16 @@ const bookSlice = createSlice({
         ...state,
         isLoading: false,
         error: action.error,
+      }))
+      .addCase(addBook.pending, (state) => ({
+        ...state,
+        isLoading: false,
+        books: state.books,
+      }))
+      .addCase(addBook.fulfilled, (state) => ({
+        ...state,
+        isLoading: false,
+        books: state.books,
       }));
   },
 });
