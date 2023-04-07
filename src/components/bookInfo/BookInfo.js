@@ -9,19 +9,17 @@ function BookInfo() {
   const dispatch = useDispatch();
   const [bookName, setBookName] = useState('');
   const [authorName, setAuthorName] = useState('');
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if (bookName.trim() && authorName.trim()) {
       dispatch(addBook({
-        item_id: uuid(),
-        title: bookName,
-        author: authorName,
-        category: '',
+        item_id: uuid(), title: bookName, author: authorName, category: '',
       }));
       setBookName('');
       setAuthorName('');
     }
+    setBookName('');
+    setAuthorName('');
   };
 
   return (
@@ -31,12 +29,14 @@ function BookInfo() {
         value={bookName}
         onChange={(event) => setBookName(event.target.value)}
         placeholder="Title"
+        required
       />
       <input
         type="text"
         value={authorName}
         onChange={(event) => setAuthorName(event.target.value)}
         placeholder="Author"
+        required
       />
       <Button btnText="Add Book" btnAction={handleSubmit} btnType="submit" />
 

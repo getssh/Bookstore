@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = 'u4wOJkEcCFB44WNH7OIZ';
+const apiKey = '401nsfJAaLLrOnazqcuE';
 const url = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${apiKey}/books/`;
 export const getBook = async () => {
   const response = await axios.get(url);
@@ -13,6 +13,6 @@ export const createBook = async (book) => {
 };
 
 export const deleteBook = async (id) => {
-  const response = await axios.delete(url, id);
-  return response;
+  const response = await axios.delete(`${url}${id}`, id);
+  return response.data;
 };
