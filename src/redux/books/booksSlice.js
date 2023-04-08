@@ -5,7 +5,7 @@ export const getBooks = createAsyncThunk('books/getBooks', getBook);
 export const addBook = createAsyncThunk('books/addBook',
   async (bookData) => {
     const response = await createBook(bookData);
-    return response;
+    return response.data;
   });
 export const removeBook = createAsyncThunk('books/removeBook',
   async (id) => {
@@ -14,7 +14,7 @@ export const removeBook = createAsyncThunk('books/removeBook',
   });
 
 const initialState = {
-  books: {},
+  books: [],
   isLoading: false,
   error: null,
 };
@@ -27,8 +27,7 @@ const bookSlice = createSlice({
     builder
       .addCase(getBooks.pending, (state) => ({
         ...state,
-        isLoading: true,
-        books: state.books,
+        isLoading: false,
       }))
       .addCase(getBooks.fulfilled, (state, action) => ({
         ...state,
@@ -38,22 +37,15 @@ const bookSlice = createSlice({
       .addCase(getBooks.rejected, (state, action) => ({
         ...state,
         isLoading: false,
-        error: action.error,
-      }))
-      .addCase(addBook.pending, (state) => ({
-        ...state,
-        isLoading: false,
-        books: state.books,
+        error: action.payload,
       }))
       .addCase(addBook.fulfilled, (state) => ({
         ...state,
         isLoading: false,
-        books: state.books,
       }))
-      .addCase(addBook.rejected, (state, action) => ({
+      .addCase(removeBook.fulfilled, (state) => ({
         ...state,
         isLoading: false,
-        error: action.error,
       }));
   },
 });
