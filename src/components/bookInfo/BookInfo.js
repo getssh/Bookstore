@@ -42,7 +42,7 @@ function BookInfo() {
           required
           className="author-name"
         />
-        <button onClick={handleSubmit} type="button" className="add-btn">ADD BOOK</button>
+        <button onClick={handleSubmit} type="submit" className="add-btn">ADD BOOK</button>
       </form>
     </div>
   );
