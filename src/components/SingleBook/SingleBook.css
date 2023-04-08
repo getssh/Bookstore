@@ -9,8 +9,9 @@
   border: solid 1px #e8e8e8;
   background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 1rem;
+  padding: 0 2rem;
 }
 
 .first-col {
@@ -43,6 +44,10 @@
 
 .book-links > *:hover {
   cursor: pointer;
+}
+
+.edit-btn {
+  margin-left: -1.2rem;
 }
 
 .book-title {
@@ -141,4 +146,61 @@
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start
+}
+
+.chapter-header {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter-name {
+  width: 5.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 3.813rem 0.25rem 4.188rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.update-progress {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 1.75rem 1.05rem 0.563rem 4.788rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  font-family: RobotoSlab, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.right-side {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

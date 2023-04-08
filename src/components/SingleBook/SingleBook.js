@@ -23,14 +23,21 @@ const SingleBook = ({ book, id }) => {
             btnAction={handleDelete}
             btnType="button"
           />
-          <button type="button">Edit</button>
+          <button type="button" className="edit-btn">Edit</button>
         </div>
       </div>
-      <div className="book-status">
-        <div className="status-circle" />
-        <div className="status-percent">
-          <span className="percent-num">64%</span>
-          <span className="completed">completed</span>
+      <div className="right-side">
+        <div className="book-status">
+          <div className="status-circle" />
+          <div className="status-percent">
+            <span className="percent-num">64%</span>
+            <span className="completed">completed</span>
+          </div>
+        </div>
+        <div className="chapter">
+          <p className="chapter-header">Current Chapter</p>
+          <p className="chapter-name">Chapter 17</p>
+          <button type="button" className="update-progress">Update progress</button>
         </div>
       </div>
     </div>
