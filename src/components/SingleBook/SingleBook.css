@@ -10,6 +10,7 @@
   background-color: #fff;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 1rem;
 }
 
 .first-col {
@@ -101,7 +102,7 @@
   width: 4.25rem;
   border: 0.3rem solid;
   border-radius: 50%;
-  border-color: #3786cb #379cf6 #379cf6 transparent;
+  border-color: #3786cb #379cf6 #379cf6 rgba(18, 18, 18, 0.2);
   transform: rotate(45deg);
 }
 
