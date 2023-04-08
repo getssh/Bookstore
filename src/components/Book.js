@@ -16,7 +16,6 @@ const Book = () => {
 
   return (
     <div>
-      <h2>Book Store</h2>
       {
         isLoading
         && (
@@ -33,7 +32,7 @@ const Book = () => {
         </div>
         )
       }
-      <div>
+      <div className="books">
         <ul>
           {Object.keys(books).map((book) => (
             <div key={book}>
