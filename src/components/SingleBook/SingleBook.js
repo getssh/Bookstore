@@ -10,19 +10,23 @@ const SingleBook = ({ book, id }) => {
     dispatch(removeBook(id));
   };
   return (
-    <li>
-      <span>{book.title}</span>
-      {' '}
-      By
-      {' '}
-      <span>{book.author}</span>
-      {' '}
-      <Button
-        btnText="Remove"
-        btnAction={handleDelete}
-        btnType="button"
-      />
-    </li>
+    <div className="single-book">
+      <div className="first-col">
+        <span className="book-category">Action</span>
+        <span className="book-title">{book.title}</span>
+        <span className="book-author">{book.author}</span>
+        <div className="book-links">
+          <button type="button">Comments</button>
+          <Button
+            className="remove-link"
+            btnText="Remove"
+            btnAction={handleDelete}
+            btnType="button"
+          />
+          <button type="button">Edit</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
