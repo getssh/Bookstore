@@ -26,6 +26,13 @@ const SingleBook = ({ book, id }) => {
           <button type="button">Edit</button>
         </div>
       </div>
+      <div className="book-status">
+        <div className="status-circle" />
+        <div className="status-percent">
+          <span className="percent-num">64%</span>
+          <span className="completed">completed</span>
+        </div>
+      </div>
     </div>
   );
 };
