@@ -7,12 +7,12 @@ import { getBooks } from '../redux/books/booksSlice';
 
 const Book = () => {
   const {
-    books, isLoading, error, done,
+    books, isLoading, error,
   } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
-  }, [dispatch, done]);
+  }, [books, dispatch]);
 
   return (
     <div>
@@ -38,8 +38,7 @@ const Book = () => {
           {Object.keys(books).map((book) => (
             <div key={book}>
               <SingleBook
-                bookName={books[book][0].title}
-                authorName={books[book][0].author}
+                book={books[book][0]}
                 id={book}
               />
             </div>

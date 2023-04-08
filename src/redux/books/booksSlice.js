@@ -17,7 +17,6 @@ const initialState = {
   books: {},
   isLoading: false,
   error: null,
-  done: false,
 };
 
 const bookSlice = createSlice({
@@ -29,6 +28,7 @@ const bookSlice = createSlice({
       .addCase(getBooks.pending, (state) => ({
         ...state,
         isLoading: true,
+        books: state.books,
       }))
       .addCase(getBooks.fulfilled, (state, action) => ({
         ...state,
@@ -49,6 +49,11 @@ const bookSlice = createSlice({
         ...state,
         isLoading: false,
         books: state.books,
+      }))
+      .addCase(addBook.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.error,
       }));
   },
 });
