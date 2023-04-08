@@ -30,7 +30,6 @@
 .bookstore-header nav ul {
   list-style-type: none;
   display: flex;
-  column-gap: 2rem;
 }
 
 .bookstore-header nav ul li a {

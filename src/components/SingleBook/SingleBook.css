@@ -19,11 +19,11 @@
 }
 
 .book-links {
-  margin: 0;
+  margin-left: -0.3rem;
   padding: 0;
 }
 
-.book-links>* {
+.book-links > * {
   border: none;
   background-color: transparent;
   width: 4.563rem;
@@ -36,10 +36,10 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: rgba(67, 134, 191, 0.7);
 }
 
-.book-links>*:hover {
+.book-links > *:hover {
   cursor: pointer;
 }
 
@@ -83,6 +83,6 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: rgba(67, 134, 191, 0.7);
   text-align: left;
 }
