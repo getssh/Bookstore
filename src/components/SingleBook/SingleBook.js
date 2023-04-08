@@ -4,19 +4,22 @@ import { useDispatch } from 'react-redux';
 import Button from '../Button/Button';
 import { removeBook } from '../../redux/books/booksSlice';
 
-const SingleBook = ({ bookName, authorName, id }) => {
+const SingleBook = ({ book, id }) => {
   const dispatch = useDispatch();
+  const handleDelete = () => {
+    dispatch(removeBook(id));
+  };
   return (
     <li>
-      {bookName}
+      <span>{book.title}</span>
       {' '}
-      by
+      By
       {' '}
-      {authorName}
+      <span>{book.author}</span>
       {' '}
       <Button
         btnText="Remove"
-        btnAction={() => dispatch(removeBook(id))}
+        btnAction={handleDelete}
         btnType="button"
       />
     </li>
@@ -24,8 +27,7 @@ const SingleBook = ({ bookName, authorName, id }) => {
 };
 
 SingleBook.propTypes = {
-  bookName: PropTypes.string.isRequired,
-  authorName: PropTypes.string.isRequired,
+  book: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
 };
 

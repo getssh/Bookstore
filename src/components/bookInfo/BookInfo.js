@@ -13,10 +13,14 @@ function BookInfo() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (bookName.trim() && authorName.trim()) {
-      dispatch(addBook({ item_id: uuid(), title: bookName, author: authorName }));
+      dispatch(addBook({
+        item_id: uuid(), title: bookName, author: authorName, category: '',
+      }));
       setBookName('');
       setAuthorName('');
     }
+    setBookName('');
+    setAuthorName('');
   };
 
   return (
@@ -26,12 +30,14 @@ function BookInfo() {
         value={bookName}
         onChange={(event) => setBookName(event.target.value)}
         placeholder="Title"
+        required
       />
       <input
         type="text"
         value={authorName}
         onChange={(event) => setAuthorName(event.target.value)}
         placeholder="Author"
+        required
       />
       <Button btnText="Add Book" btnAction={handleSubmit} btnType="submit" />
 
