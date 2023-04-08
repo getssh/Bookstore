@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
 import { addBook } from '../../redux/books/booksSlice';
-import Button from '../Button/Button';
 
 function BookInfo() {
   const dispatch = useDispatch();
@@ -24,24 +23,28 @@ function BookInfo() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={bookName}
-        onChange={(event) => setBookName(event.target.value)}
-        placeholder="Title"
-        required
-      />
-      <input
-        type="text"
-        value={authorName}
-        onChange={(event) => setAuthorName(event.target.value)}
-        placeholder="Author"
-        required
-      />
-      <Button btnText="Add Book" btnAction={handleSubmit} btnType="submit" />
-
-    </form>
+    <div className="form-wraper">
+      <h2 className="bookform-title">ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit} className="book-form">
+        <input
+          type="text"
+          value={bookName}
+          onChange={(event) => setBookName(event.target.value)}
+          placeholder=" Book title"
+          required
+          className="book-name"
+        />
+        <input
+          type="text"
+          value={authorName}
+          onChange={(event) => setAuthorName(event.target.value)}
+          placeholder="Author name"
+          required
+          className="author-name"
+        />
+        <button onClick={handleSubmit} type="submit" className="add-btn">ADD BOOK</button>
+      </form>
+    </div>
   );
 }
 

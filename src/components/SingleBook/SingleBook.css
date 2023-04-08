@@ -1,3 +1,207 @@
 * {
   box-sizing: border-box;
 }
+
+.single-book {
+  width: 75rem;
+  height: 10.625rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-left: -2.5rem;
+  padding: 0 2rem;
+}
+
+.first-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1.5rem;
+}
+
+.book-links {
+  margin-left: -9rem;
+  padding: 0;
+}
+
+.book-links > * {
+  border: none;
+  background-color: transparent;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(67, 134, 191, 0.7);
+}
+
+.book-links > *:hover {
+  cursor: pointer;
+}
+
+.edit-btn {
+  margin-left: -1.2rem;
+}
+
+.book-title {
+  width: 23.313rem;
+  height: 1.813rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+  text-align: left;
+  margin-top: -1rem;
+}
+
+.book-category {
+  width: 3.063rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: -1.5rem 0 -0.5rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(67, 134, 191, 0.7);
+  text-align: left;
+}
+
+.book-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.status-circle {
+  background: transparent;
+  height: 4.25rem;
+  width: 4.25rem;
+  border: 0.3rem solid;
+  border-radius: 50%;
+  border-color: #3786cb #379cf6 #379cf6 rgba(18, 18, 18, 0.2);
+  transform: rotate(45deg);
+}
+
+.status-percent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.02rem;
+}
+
+.percent-num {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.4rem 5.75rem -0.9rem 0.688rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.7rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.2rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.chapter-header {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter-name {
+  width: 5.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 3.813rem 0.25rem 4.188rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.update-progress {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 1.75rem 1.05rem 0.563rem 4.788rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  font-family: RobotoSlab, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.right-side {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
