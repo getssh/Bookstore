@@ -16,6 +16,14 @@
   color: #0290ff;
 }
 
+a {
+  color: #121212;
+}
+
+a:active {
+  color: #121212;
+}
+
 .bookstore-header {
   display: flex;
   justify-content: flex-start;
@@ -30,7 +38,6 @@
 .bookstore-header nav ul {
   list-style-type: none;
   display: flex;
-
 }
 
 .bookstore-header nav ul li a {
@@ -48,14 +55,6 @@ nav ul li:first-child {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
-}
-
-a {
-  color: #121212;
-}
-
-a:active {
   color: #121212;
 }
 
